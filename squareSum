@@ -1,0 +1,19 @@
+// Complete the square sum function so that it squares each number 
+// passed into it and then sums the results together.
+
+// For example, for [1, 2, 2] should return 9 because 
+// 1*1 + 2*2 + 2*2 = 1 + 4 + 4 = 9
+
+
+function squareSum(numbers){
+    return numbers.reduce((sum, num) => sum + num * num, 0);
+}
+
+// The squareSum function takes an array of numbers as input, and 
+// returns the sum of the squares of the numbers in the array. 
+// The reduce method is used to sum up the squares of the numbers. 
+// The sum variable represents the running total, and num * num is the
+// square of the current number being processed. The 0 argument passed 
+// to reduce is the initial value of the sum variable. 
+// If the input array is empty, the reduce method will return 
+// the initial value, which is 0 in this case.
