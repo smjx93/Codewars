@@ -11,8 +11,8 @@ Example
 0 => [0]
 */
 
-
-function reverseDigits(number) {
+function digitize(n){
+  function reverseDigits(number) {
     // Convert the number to a string and split it 
     // into an array of its individual digits
     const digits = number.toString().split('');
@@ -22,4 +22,15 @@ function reverseDigits(number) {
     return digits.reverse().map(digit => parseInt(digit, 10));
   }
 
+  return reverseDigits(n);
+}
 
+/* 
+The parseInt(digit, 10) function call is used to parse into integers
+i.e. convert each digit, which is currently a string, back to a number.
+
+The parseInt() function takes two arguments - 
+1. the string to be converted to a number
+2. the radix, which specifies the number base 
+of the string. In this case, base 10 (decimal).
+*/
