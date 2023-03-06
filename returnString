@@ -1,0 +1,18 @@
+/*
+Make a function that will return a greeting statement 
+that uses an input; your program should return, 
+"Hello, <name> how are you doing today?".
+*/
+
+function greet(name) {
+    return `Hello, ${name} how are you doing today?`;
+  }
+
+  /*
+  This function takes a parameter name and returns a 
+  string that greets the person using their name. 
+  
+  The string is constructed using a template literal, 
+  which allows us to embed the name variable within 
+  the string using ${}.
+  */
