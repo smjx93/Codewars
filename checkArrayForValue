@@ -1,0 +1,29 @@
+// You will be given an array a and a value x. All you need to do is check whether the provided array contains the value.
+
+// Array can contain numbers or strings. X can be either.
+
+// Return true if the array contains the value, false if not.
+
+function checkArrayForValue(a, x) {
+    if (a.includes(x)) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+//   In this solution, we use the includes() method 
+//   of the array a to check whether the value x is 
+//   present in the array. If x is in a, the function 
+//   returns true. If x is not in a, the function returns
+//   false. This solution works for arrays containing 
+//   numbers or strings.
+  
+  
+  
+
+  
+
+  
+  
+  
