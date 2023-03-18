@@ -20,6 +20,11 @@ function howMuchILoveYou(numPetals) {
 /* This function uses an array of the phrases and the modulo operator 
 to handle cases where there are more than 6 petals. 
 
+numPetals is the number of petals on the flower, which can be any positive integer
+(numPetals -1) calculates the index of the corresponding phrase of the last petal
+It uses - 1 because arrays are zero indexed
+
+
 The index of the phrase is calculated by subtracting 1 from the number 
 of petals and using modulo with the length of the array, which will 
 wrap around to the start of the array when necessary. 
