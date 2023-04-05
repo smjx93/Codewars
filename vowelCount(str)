@@ -1,0 +1,21 @@
+function getCount(str) {
+  const vowels = "aeiou"; // define the vowels
+  let count = 0; // initialize a counter for vowels
+
+  for (let i = 0; i < str.length; i++) {
+    if (vowels.includes(str[i])) {
+      count++; // increment the counter if the character is a vowel
+    }
+  }
+
+  return count; // return the total count of vowels
+}
+
+/* In this solution, we define the vowels as a string 
+"aeiou", and then iterate through the input string 
+str using a for loop. 
+For each character in the string, we check if it's
+included in the vowels string using the includes method.
+If the character is a vowel, we increment the count 
+variable. 
+*/
