@@ -1,0 +1,20 @@
+
+/* You ask a small girl,"How old are you?" She always says, "x years old", 
+where x is a random number between 0 and 9.
+
+Write a program that returns the girl's age (0-9) as an integer.
+
+Assume the test input string is always a valid string. 
+For example, the test input may be "1 year old" or "5 years old".
+The first character in the string is always a number. */
+
+function getAge(inputString) {
+  const ageString = inputString.charAt(0); // extract the first character
+  const age = parseInt(ageString); // convert the character to an integer
+  return age; // return the girl's age as an integer
+}
+
+/* charAt(0) method to extract the first character from the input string. 
+Since the girl always says her age in the format "x years old", 
+where x is the age, the first character in the string represents
+the girl's age. */
