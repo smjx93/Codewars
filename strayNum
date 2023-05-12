@@ -1,0 +1,50 @@
+/* DESCRIPTION:
+You are given an odd-length array of integers, 
+in which all of them are the same, except for 
+one single number.
+
+Complete the method which accepts such an array, 
+and returns that single different number.
+
+The input array will always be valid! (odd-length >= 3)
+
+Examples
+[1, 1, 2] ==> 2
+[17, 17, 3, 17, 17, 17, 17] ==> 3
+*/
+
+function stray(numbers) {
+  const uniqueNumberMap = {}
+
+  for (let i = 0; i < numbers.length; i++) {
+    if (uniqueNumberMap[numbers[i]]) {
+      uniqueNumberMap[numbers[i]]++
+    } else {
+      uniqueNumberMap[numbers[i]] = 1
+    }
+  }
+
+  for (let num in uniqueNumberMap) {
+    if (uniqueNumberMap[num] === 1) {
+      return parseInt(num)
+    }
+  }
+
+  return 0 // Default value if no unique number found (optional)
+}
+
+/* We first initialize an empty object uniqueNumberMap to store 
+the count of each number in the array.
+
+We then iterate over the input array arr using a for loop. 
+For each number in the array, we check if it already exists as 
+a property in uniqueNumberMap. If it does, we increment its count by 1.
+Otherwise, we add the number as a property and set its count to 1.
+
+After counting the occurrences of each number, we loop through 
+uniqueNumberMap and find the number with a count of 1. 
+Since there is only one number that is different in the array,
+it will have a count of 1.
+
+Finally, we parse the number from a string to an integer using
+parseInt() and return it as the single different number.*/
