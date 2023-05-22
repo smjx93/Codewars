@@ -1,0 +1,18 @@
+// in this function: depending on its position in the string we must multiply the letter. 
+// the first letter of the resulting string must be capitalized
+
+function accum(s) {
+  return s
+    .split('')        // split the string into an array of indiv charas
+                      // iterate over each chara and conver toUpperCase 
+                      // and concat with a lowercase repitition
+    .map((char, index) => char.toUpperCase() + char.toLowerCase().repeat(index))
+    .join('-');       // join the modified charas with hyphens
+}
+
+/* This time no story, no theory. The examples below show you how to write function accum:
+
+Examples:
+accum("abcd") -> "A-Bb-Ccc-Dddd"
+accum("RqaEzty") -> "R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy"
+accum("cwAt") -> "C-Ww-Aaa-Tttt"  */
